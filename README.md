@@ -4,12 +4,12 @@
 ![Static Badge](https://img.shields.io/badge/OS-linux-orange)
 ![Static Badge](https://img.shields.io/badge/Tools-gcc-navy)
 ![Static Badge](https://img.shields.io/badge/languages-C%2C_TL--Verilog-crimson)
-![GitHub last commit](https://img.shields.io/github/last-commit/fayizferosh/risc-v-myth-report)
-![GitHub language count](https://img.shields.io/github/languages/count/fayizferosh/risc-v-myth-report)
-![GitHub top language](https://img.shields.io/github/languages/top/fayizferosh/risc-v-myth-report)
-![GitHub repo size](https://img.shields.io/github/repo-size/fayizferosh/risc-v-myth-report)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/fayizferosh/risc-v-myth-report)
-![GitHub repo file count (file type)](https://img.shields.io/github/directory-file-count/fayizferosh/risc-v-myth-report)
+![GitHub last commit](https://img.shields.io/github/last-commit/RISCV-MYTH-WORKSHOP/riscv-myth-workshop-sep23-fayizferosh)
+![GitHub language count](https://img.shields.io/github/languages/count/RISCV-MYTH-WORKSHOP/riscv-myth-workshop-sep23-fayizferosh)
+![GitHub top language](https://img.shields.io/github/languages/top/RISCV-MYTH-WORKSHOP/riscv-myth-workshop-sep23-fayizferosh)
+![GitHub repo size](https://img.shields.io/github/repo-size/RISCV-MYTH-WORKSHOP/riscv-myth-workshop-sep23-fayizferosh)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/RISCV-MYTH-WORKSHOP/riscv-myth-workshop-sep23-fayizferosh)
+![GitHub repo file count (file type)](https://img.shields.io/github/directory-file-count/RISCV-MYTH-WORKSHOP/riscv-myth-workshop-sep23-fayizferosh)
 <!---
 Comments
 -->
