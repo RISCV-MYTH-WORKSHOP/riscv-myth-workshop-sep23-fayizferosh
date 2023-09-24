@@ -51,7 +51,7 @@
                          ($op1 == 2'b00) ? $sum1 :
                             ($op1 == 2'b01) ? $diff1 :
                                ($op1 == 2'b10) ? $prod1 : $quot1;
-   \\ Pipeline Error Condition
+   // Pipeline Error Condition
    |pipeline
       @1
          $err1 = $bad_input | $illegal_op;
@@ -59,6 +59,8 @@
          $err2 = $err1 | $over_flow;
       @6
          $err3 = $err2 | $div_by_zero;
+   // Sequential Calculator with Counter
+   
    *passed = *cyc_cnt > 40;
    *failed = 1'b0;
 \SV
