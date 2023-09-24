@@ -60,7 +60,18 @@
       @6
          $err3 = $err2 | $div_by_zero;
    // Sequential Calculator with Counter
-   
+   |calc
+      @1
+         $reset = *reset;
+         $cnt = $reset ? 0 : >>1$cnt + 1;
+         $op2[1:0] = $rand6[1:0];
+         $vaaal1[31:0] = $reset ? 32'b0 : >>1$out4;
+         $vaaal2[31:0] = $rand7[3:0];
+         $sum2[31:0] = $vaaal1 + $vaaal2;
+         $diff2[31:0] = $vaaal1 - $vaaal2;
+         $prod2[31:0] = $vaaal1 * $vaaal2;
+         $quot2[31:0] = $vaaal1 / $vaaal2;
+         $out4[31:0] = $reset ? 0 : ($op2[1:0] ? $sum2 : $diff2 : $prod2 : $quot2);
    *passed = *cyc_cnt > 40;
    *failed = 1'b0;
 \SV
