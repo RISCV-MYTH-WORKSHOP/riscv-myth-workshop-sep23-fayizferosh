@@ -47,10 +47,7 @@
          $prod1[31:0] = $vaal1 * $vaal2;
          $quot1[31:0] = $vaal1 / $vaal2;
       @2
-         $out3[31:0] = $reset ? 32'b0 :
-                         ($op1 == 2'b00) ? $sum1 :
-                            ($op1 == 2'b01) ? $diff1 :
-                               ($op1 == 2'b10) ? $prod1 : $quot1;
+         $out3[31:0] = $reset ? 32'b0 : ($op1 == 2'b00) ? $sum1 : ($op1 == 2'b01) ? $diff1 : ($op1 == 2'b10) ? $prod1 : $quot1;
    // Pipeline Error Condition
    |pipeline
       @1
@@ -72,6 +69,42 @@
          $prod2[31:0] = $vaaal1 * $vaaal2;
          $quot2[31:0] = $vaaal1 / $vaaal2;
          $out4[31:0] = $reset ? 0 : ($op2[1:0] ? $sum2 : $diff2 : $prod2 : $quot2);
+   // Sequential Calculator with Validity 
+   |calc_validity
+      @1
+         $valid = $reset ? 0 : >>1$valid + 1 ;
+         $valid_or_reset = $reset || $valid ;
+      ?$valid_or_reset
+         @1
+            $reset = *reset;
+            $op3[1:0] = $rand8[1:0];
+            $vaaaal1[31:0] = $reset ? 32'b0 : >>2$out5;
+            $vaaaal2[31:0] = $rand9[3:0];
+            $sum3[31:0] = $vaaaal1 + $vaaaal2;
+            $diff3[31:0] = $vaaaal1 - $vaaaal2;
+            $prod3[31:0] = $vaaaal1 * $vaaaal2;
+            $quot3[31:0] = $vaaaal1 / $vaaaal2;
+         @2
+            $out5[31:0] = $reset ? 32'b0 : ($op3 == 2'b00) ? $sum3 : ($op3 == 2'b01) ? $diff3 : ($op3 == 2'b10) ? $prod3 : $quot3;
+   // Single Value Memory Calculator 
+   |calc_svm
+      @1
+         $valid1 = $reset ? 0 : >>1$valid1 + 1 ;
+         $valid_or_reset1 = $valid1 || $reset;
+      ?$valid_or_reset1
+         @1
+            $reset = *reset;
+            $op4[2:0] = $rand10[3:0];
+            $valu1[31:0] = $reset ? 32'b0 : >>2$out6;
+            $valu2[31:0] = $rand11[3:0];
+            $sum4[31:0] = $valu1 + $valu2;
+            $diff4[31:0] = $valu1 - $valu2;
+            $prod4[31:0] = $valu1 * $valu2;
+            $quot4[31:0] = $valu1 / $valu2;
+         @2               
+            $out6[31:0] = $reset | (~$valid1) ? 32'b0 : ($op4 == 3'b000) ? $sum4 : ($op4 == 3'b001) ? $diff4 : ($op4 == 3'b010) ? $prod4 : ($op4 == 3'b011) ? $quot4 : ($op4== 3'b100) ? $mem : ($op4 == 3'b101) ? $RETAIN : 0;
+      @2
+          $mem[31:0] = $reset ? 32'b0 : $op4 == 3'b101 ? >>2$out6 : $mem ;
    *passed = *cyc_cnt > 40;
    *failed = 1'b0;
 \SV
