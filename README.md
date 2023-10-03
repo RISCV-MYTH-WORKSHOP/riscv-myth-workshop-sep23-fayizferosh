@@ -2,7 +2,7 @@
 # RISC-V Pipelined Core using TL-Verilog
 
 ![Static Badge](https://img.shields.io/badge/OS-linux-orange)
-![Static Badge](https://img.shields.io/badge/Tools-gcc--RISC--Sim%2C_makerchip.com-navy)
+![Static Badge](https://img.shields.io/badge/Tools-gcc--RISC--V--Sim%2C_makerchip.com-navy)
 ![Static Badge](https://img.shields.io/badge/languages-C%2C_TL--Verilog-crimson)
 ![GitHub last commit](https://img.shields.io/github/last-commit/RISCV-MYTH-WORKSHOP/riscv-myth-workshop-sep23-fayizferosh)
 ![GitHub language count](https://img.shields.io/github/languages/count/RISCV-MYTH-WORKSHOP/riscv-myth-workshop-sep23-fayizferosh)
