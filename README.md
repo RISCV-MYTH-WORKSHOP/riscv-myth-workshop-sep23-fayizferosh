@@ -42,3 +42,12 @@ There are mainly 3 different parts in this course. They are:
 3. Physical design implementation of picorv32
 
 ![Screenshot (283)](https://github.com/fayizferosh/risc-v-myth-report/assets/63997454/832f0ea6-2d60-4d9a-937c-a2dedd5f8cac)
+
+# Certificate
+
+![VSD-IAT-MYTH-Workshop-Certificate-Sep-2023](https://github.com/RISCV-MYTH-WORKSHOP/riscv-myth-workshop-sep23-fayizferosh/assets/63997454/1f8e47fc-7b4f-4abb-ba85-74b57fe7958a)
+
+# Acknowledgements
+
+* [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
+* [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA.
